@@ -5,9 +5,6 @@ import pickle
 import article
 
 #Makes a database of all citations based on a paper or list of papers
-#CsI_1, CsI_2, Ar_1
-#paperIDs=["1614476","1945677","1787880"] #Inspire-hep paper IDs
-#dbName="CEvNS.pkl"
 paperIDs=["85292"]
 dbName="Freedman.pkl"
 
@@ -23,6 +20,9 @@ for paperID in paperIDs:
   #Limited to 1000 results in inspire-hep API
   if nCitations>1000:
     nCitations=1000
+
+  if nCitations==0:
+    continue
     
   #Make ths call -- we sort by most cited to get top 1000 articles if more are present
   apiCall="https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A"+paperID+"&doc_type=published&doc_type=article&size="+str(nCitations)+"&sort=mostcited"
