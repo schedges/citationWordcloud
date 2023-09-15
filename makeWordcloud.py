@@ -14,7 +14,7 @@ other_stopwords=["display","mn","mrow","mo","mi","math display",
                  "multiscripts","mathvariant","normal","L","two","S",
                  "three","u","C","several","U","_","N","g","B","e","m",
                  "linebreak","badbreak","mprescripts","none","mmultiscripts",
-                 "mml","id","p"]
+                 "mml","id","p","textrm",">"]
 stopwords.update(other_stopwords)
 
 title=dbName.split(".")[0]
