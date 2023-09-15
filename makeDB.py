@@ -33,6 +33,7 @@ for paperID in paperIDs:
     
     if "id" in citation:
       id=citation["id"]
+      #Don't include if already in DB
       if id in idsInDict:
         continue
       else:
