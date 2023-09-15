@@ -34,5 +34,5 @@ for paper in paperDB:
 wc = WordCloud(stopwords=stopwords,background_color = 'white', width = 1920, height = 1080)
 wc.generate_from_text(data)
 wc.to_file(title+"_"+wordcloudType+".png")
-plt.imshow(wc)
-plt.show()
+#plt.imshow(wc)
+#plt.show()
